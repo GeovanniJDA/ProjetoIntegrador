@@ -1841,7 +1841,7 @@ a.btn_red {
   text-transform: capitalize;
 }
 
-.user_login label {
+.social_login label {
   color: #afafaf;
 }
 
@@ -1864,9 +1864,9 @@ a.btn_red {
   margin-bottom: 5px;
 }
 
-.user_login input[type="text"],
-.user_login input[type="email"],
-.user_login input[type="password"] {
+.social_login input[type="text"],
+.social_login input[type="email"],
+.social_login input[type="password"] {
   display: block;
   width: 90%;
   padding: 10px;
@@ -1874,18 +1874,18 @@ a.btn_red {
   color: #666;
 }
 
-.user_login input[type="checkbox"] {
+.social_login input[type="checkbox"] {
   float: left;
   margin-right: 10px;
   width: 22px;
   height: 22px;
 }
 
-.user_login input[type="checkbox"]+label {
+.social_login input[type="checkbox"]+label {
   float: left;
 }
 
-.user_login .checkbox {
+.social_login .checkbox {
   margin-bottom: 10px;
   clear: both;
   overflow: hidden;

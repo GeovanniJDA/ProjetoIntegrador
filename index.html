@@ -86,26 +86,9 @@ https://templatemo.com/tm-570-chain-app-dev
     </div>
 
     <section class="popupBody">
-        <!-- Social Login -->
-        <div class="social_login">
-            <div class="">
-                
-
-                
-            </div>
-
-            <div class="centeredText">
-                <span>Escolha a opção desejada</span>
-            </div>
-
-            <div class="action_btns">
-                <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-                <div class="one_half last"><a href="#" id="register_form" class="btn">Cadastro</a></div>
-            </div>
-        </div>
-
+      
         <!-- Username & Password Login form -->
-        <div class="user_login">
+        <div class="social_login">
             <form action="login.php" method="POST">
                 <label>CPF</label>
                 <input type="text" name="cpf" />
@@ -115,18 +98,11 @@ https://templatemo.com/tm-570-chain-app-dev
                 <input type="password" name="senha" />
                 <br />
 
-                <div class="checkbox">
-                    <input id="remember" type="checkbox" />
-                    <label for="remember">Remember me on this computer</label>
-                </div>
-
                 <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i>Voltar</a></div>
-                    <button type = "submit" class="one_half last btn"> Logar </button>
+                    <button type = "submit" class="one_half last btn"> Login </button>
+                    <button id="register_form" class="one_half last btn"> Registrar-se </button>
                 </div>
             </form>
-
-            <a href="#" class="forgot_password">Forgot password?</a>
         </div>
 
         <!-- Register Form -->
@@ -141,7 +117,7 @@ https://templatemo.com/tm-570-chain-app-dev
                 <br />
 
                 <label>Data de nascimento</label> 
-                <input type = "date" name = "data_nascimento" />
+                <input type = "date" name = "data_nascimento"/>
                 <br />
 
                 <label>Email</label> 
@@ -152,11 +128,6 @@ https://templatemo.com/tm-570-chain-app-dev
                 <input type = "password" name = "senha" />
                 <br />
  
-                <div class="checkbox">
-                    <input id="send_updates" type="checkbox" />
-                    <label for="send_updates">Send me occasional email updates</label>
-                </div>
-
                 <div class="action_btns">
                     <div class="one_half"><a href="#" class="btn back_btn"> Voltar </a></div>
                     <button type = "submit" class="one_half last btn"> Registrar </button>
