@@ -46,6 +46,7 @@ $(function() {
 		// Calling Login Form
 		$("#login_form").click(function() {
 				$(".social_login").hide();
+				$(".user_login").show();
 				return false;
 		});
 
@@ -53,20 +54,13 @@ $(function() {
 		$("#register_form").click(function() {
 				$(".social_login").hide();
 				$(".user_register").show();
-				$(".header_title").text('Registro da Vitima');
+				$(".header_title").text('Register');
 				return false;
 		});
 
-    $("#register_form_agente_publico").click(function() {
-      $(".user_register").hide();
-      $(".agente_publico_register").show();
-      $(".header_title").text('Cadastro do Agente Publico');
-      return false;
-  });
-
 		// Going back to Social Forms
 		$(".back_btn").click(function() {
-        $(".agente_publico_register").hide();
+				$(".user_login").hide();
 				$(".user_register").hide();
 				$(".social_login").show();
 				$(".header_title").text('Login');

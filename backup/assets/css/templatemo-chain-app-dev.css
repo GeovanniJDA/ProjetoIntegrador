@@ -42,7 +42,6 @@ figure, header, nav, section, article, aside, footer, figcaption {
   border: 0;
   outline: 0;
 }
-/* Meus stilos*/
 
 /* clear fix */
 .grid:after {
@@ -143,7 +142,7 @@ global styles
 */
 html,
 body {
-  background: rgb(230, 230, 230);
+  background: #fff;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -172,8 +171,6 @@ body {
     margin-bottom: 60px;
   }
 }
-
-.cent {right: -25px}
 
 .section-heading {
   position: relative;
@@ -244,8 +241,6 @@ body {
   margin-left: 8px;
 }
 
-
-
 .gradient-button a {
   display: inline-block !important;
   padding: 10px 20px !important;
@@ -294,7 +289,7 @@ header
 */
 
 .background-header {
-  background-color: rgb(230, 230, 230) !important;
+  background-color: #fff !important;
   height: 80px!important;
   border-bottom: none !important;
   position: fixed!important;
@@ -431,7 +426,7 @@ header
   letter-spacing: 1px;
 }
 
-.header-area .main-nav .nav li:hover a,s
+.header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
   color: #4b8ef1!important;
 }
@@ -1806,6 +1801,7 @@ a.btn_red {
   
   padding: 5px 10px;
   margin-right: 10px;
+  float: left;
   color: #FFF;
   font-size: 16px;
   text-align: center;
@@ -1841,7 +1837,7 @@ a.btn_red {
   text-transform: capitalize;
 }
 
-.social_login label {
+.user_login label {
   color: #afafaf;
 }
 
@@ -1864,9 +1860,9 @@ a.btn_red {
   margin-bottom: 5px;
 }
 
-.social_login input[type="text"],
-.social_login input[type="email"],
-.social_login input[type="password"] {
+.user_login input[type="text"],
+.user_login input[type="email"],
+.user_login input[type="password"] {
   display: block;
   width: 90%;
   padding: 10px;
@@ -1874,24 +1870,24 @@ a.btn_red {
   color: #666;
 }
 
-.social_login input[type="checkbox"] {
+.user_login input[type="checkbox"] {
   float: left;
   margin-right: 10px;
   width: 22px;
   height: 22px;
 }
 
-.social_login input[type="checkbox"]+label {
+.user_login input[type="checkbox"]+label {
   float: left;
 }
 
-.social_login .checkbox {
+.user_login .checkbox {
   margin-bottom: 10px;
   clear: both;
   overflow: hidden;
 }
 
-.agente_publico_link {
+.agente_publico {
   display: block;
   margin: 20px 0 10px;
   clear: both;
@@ -1940,46 +1936,6 @@ a.btn_red {
   overflow: hidden;
 }
 
-/* Agente Publico Register Form */
-
-.agente_publico_register {
-  display: none;
-}
-
-.agente_publico_register label {
-  color: #afafaf;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.agente_publico_register input[type="text"],
-.agente_publico_register input[type="email"],
-.agente_publico_register input[type="password"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #DDD;
-  color: #666;
-}
-
-.agente_publico_register input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
-  float: left;
-  margin-right: 8px;
-}
-
-.agente_publico_register input[type="checkbox"]+label {
-  float: left;
-  color: #afafaf;
-}
-
-.agente_publico_register .checkbox {
-  margin-bottom: 10px;
-  clear: both;
-  overflow: hidden;
-}
-
 
 
 /* 
@@ -1994,7 +1950,7 @@ responsive
   .header-area .main-nav .logo h4 {
     font-size: 24px;
   }
-  .header-area .main-nav h4 img {
+  .header-area .main-nav .logo h4 img {
     max-width: 25px;
     margin-left: 0px;
   }
