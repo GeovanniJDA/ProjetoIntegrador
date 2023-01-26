@@ -23,6 +23,7 @@
     return Util;
 
   })();
+  
 
   this.WOW = (function() {
     WOW.prototype.defaults = {

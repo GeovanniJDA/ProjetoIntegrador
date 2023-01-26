@@ -1954,6 +1954,7 @@ a.btn_red {
 
 .agente_publico_register input[type="text"],
 .agente_publico_register input[type="email"],
+.agente_publico_register input[type="tel"],
 .agente_publico_register input[type="password"],
 .agente_publico_register input[type="inputState"]{
   display: block;
