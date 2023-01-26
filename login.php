@@ -31,7 +31,7 @@ if(isset($_POST['cpf']) || isset($_POST['senha'])){
     
 }
 
-elif(isset($_POST['cpf']) || isset($_POST['senha'])){
+elseif(isset($_POST['cpf']) || isset($_POST['senha'])){
 
     $cpf = $conexao->real_escape_string($_POST['cpf']);
     $senha = $conexao->real_escape_string($_POST['senha']);
