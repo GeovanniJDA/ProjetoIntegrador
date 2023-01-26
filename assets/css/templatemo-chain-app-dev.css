@@ -1713,7 +1713,7 @@ PopUp
 }
 
 .popupContainer {
-  position: absolute;
+  position: fixed;
   width: 330px;
   height: auto;
   left: 45%;
@@ -1722,7 +1722,7 @@ PopUp
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 10px 10px;
   background: #4b8ef1;
   color: #fff;
   transition: all .3s;
@@ -1842,7 +1842,7 @@ a.btn_red {
 }
 
 .social_login label {
-  color: #afafaf;
+  color: #000000;
 }
 
 .action_btns {
@@ -1865,7 +1865,6 @@ a.btn_red {
 }
 
 .social_login input[type="text"],
-.social_login input[type="email"],
 .social_login input[type="password"] {
   display: block;
   width: 90%;
@@ -1877,8 +1876,8 @@ a.btn_red {
 .social_login input[type="checkbox"] {
   float: left;
   margin-right: 10px;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 .social_login input[type="checkbox"]+label {
@@ -1907,24 +1906,25 @@ a.btn_red {
 }
 
 .user_register label {
-  color: #afafaf;
+  color: #000000;
   display: block;
   margin-bottom: 5px;
 }
 
 .user_register input[type="text"],
 .user_register input[type="email"],
-.user_register input[type="password"] {
+.user_register input[type="password"],
+.user_register input[type="date"]{
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #DDD;
   color: #666;
 }
 
 .user_register input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   float: left;
   margin-right: 8px;
 }
@@ -1947,24 +1947,25 @@ a.btn_red {
 }
 
 .agente_publico_register label {
-  color: #afafaf;
+  color: #000000;
   display: block;
   margin-bottom: 5px;
 }
 
 .agente_publico_register input[type="text"],
 .agente_publico_register input[type="email"],
-.agente_publico_register input[type="password"] {
+.agente_publico_register input[type="password"],
+.agente_publico_register input[type="inputState"]{
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #DDD;
   color: #666;
 }
 
 .agente_publico_register input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   float: left;
   margin-right: 8px;
 }
@@ -1975,7 +1976,7 @@ a.btn_red {
 }
 
 .agente_publico_register .checkbox {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   clear: both;
   overflow: hidden;
 }
