@@ -5,14 +5,38 @@ include('conexao.php');
 #echo "funcionou";
 
 $cpf = $_POST['cpf'];
-$senha = $_POST['senha'];
+$nome = $_POST['senha'];
 
 if(isset($_POST['cpf']) || isset($_POST['senha'])){
 
     $cpf = $conexao->real_escape_string($_POST['cpf']);
     $senha = $conexao->real_escape_string($_POST['senha']);
 
-    $query = "select * from usuario where cpf = '$cpf' and senha = '$senha'";
+    $query = "select * from denunciante where cpf = '$cpf' and senha = '$senha'";
+    $sql_query = $conexao-> query($query) or die ("falha na execução do código SQL: ".$conexao->error);
+
+    $quantidade = $sql_query->num_rows;
+
+    if($quantidade == 1){
+
+        $usuario = $sql_query->fetch_assoc();
+
+        if(!isset($_SESSION)){
+            session_start();
+        }
+        $_SESSION['user'] = $usuario['cpf'];
+        $_SESSION['user'] = $usuario['senha'];
+
+        header('Location:pagina_principal.html');
+    
+}
+
+elif(isset($_POST['cpf']) || isset($_POST['senha'])){
+
+    $cpf = $conexao->real_escape_string($_POST['cpf']);
+    $senha = $conexao->real_escape_string($_POST['senha']);
+
+    $query = "select * from agente_publico where cpf = '$cpf' and senha = '$senha'";
     $sql_query = $conexao-> query($query) or die ("falha na execução do código SQL: ".$conexao->error);
 
     $quantidade = $sql_query->num_rows;
@@ -34,6 +58,7 @@ if(isset($_POST['cpf']) || isset($_POST['senha'])){
         header('Location:index.html');
     }
 }
+
 mysqli_close($conexao);
 
 ?>
