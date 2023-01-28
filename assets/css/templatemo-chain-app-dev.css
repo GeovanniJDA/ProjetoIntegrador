@@ -1982,6 +1982,42 @@ a.btn_red {
   overflow: hidden;
 }
 
+.agente_publico_endereco {
+  display: none;
+}
+
+.agente_publico_endereco label {
+  color: #000000;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.agente_publico_endereco input[type="text"]{
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #DDD;
+  color: #666;
+}
+
+.agente_publico_endereco input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 8px;
+}
+
+.agente_publico_endereco input[type="checkbox"]+label {
+  float: left;
+  color: #afafaf;
+}
+
+.agente_publico_endereco .checkbox {
+  margin-bottom: 5px;
+  clear: both;
+  overflow: hidden;
+}
+
 
 
 /* 

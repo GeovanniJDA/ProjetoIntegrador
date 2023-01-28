@@ -129,7 +129,7 @@ https://templatemo.com/tm-570-chain-app-dev
               <br />
 
               <label>CPF</label> 
-              <input type = "text" name = "cpf" />
+              <input type = "text" name = "cpf"/>
               <br />
 
               <label>Telefone</label> 
@@ -181,9 +181,34 @@ https://templatemo.com/tm-570-chain-app-dev
 
               <div class="action_btns">
                   <div class="one_half"><a href="#" class="btn back_btn"> Voltar </a></div>
-                  <button type= "submit" class="one_half last btn"> Registrar </button>
+                  <button type="submit" id="register_form_agente_publico_endereco" class="one_half last btn"> Proximo </button>
               </div>
           </form>
+      </div>
+
+      <div class="agente_publico_endereco">
+        <form method = "POST" action = "registro.php" >
+            <label>Rua</label>
+            <input type = "text" name = "rua" />
+            <br />
+
+            <label>Número</label> 
+            <input type = "text" name = "numero" />
+            <br />
+
+            <label>Bairro</label> 
+            <input type = "text" name = "bairro"/>
+            <br />
+
+            <label>CEP</label> 
+            <input type = "text" name = "cep"/>
+            <br />
+
+            <div class="action_btns">
+                <div class="one_half"><a href="#" class="btn back_btn1"> Voltar </a></div>
+                <button type= "submit" class="one_half last btn"> Registrar </button>
+            </div>
+        </form>
       </div>
 
     </section>
