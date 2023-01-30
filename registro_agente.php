@@ -16,12 +16,15 @@ $sql= "INSERT INTO agente_publico VALUES ('$cpf','$nome','$cargo','$email','$tel
 $sql= "INSERT INTO endereco_agente_publico VALUES ('$rua','$numero','$bairro','$cep')";
 
 if(mysqli_query($conexao,$sql)){
+    header('Location:pagina_secundaria.html');
+}else{
+
+    echo  "<script>alert('Ops! Algo deu errado');</script>";
     header('Location:index.html');
 }
 
 mysqli_close($conexao);
 
 
-
-
 ?>
+

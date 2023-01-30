@@ -93,7 +93,7 @@ https://templatemo.com/tm-570-chain-app-dev
 
         <!-- Register Form -->
         <div class="user_register">
-            <form method = "POST" action = "registro.php" >
+            <form method = "POST" action = "registro_denunciante.php" >
                 <label>Nome completo</label>
                 <input type = "text" name = "nome" />
                 <br />
@@ -103,11 +103,22 @@ https://templatemo.com/tm-570-chain-app-dev
                 <br />
 
                 <label>Data de nascimento</label> 
-                <input type = "date" name = "data_nascimento"/>
+                <input type = "date" name = "data_de_nascimento"/>
+                <br />
+
+                <label for="inputState">sexo</label>
+                  <select id="inputState" class="form-control" name = "sexo">
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                  </select>
                 <br />
 
                 <label>Email</label> 
                 <input type = "email" name = "email" />
+                <br />
+
+                <label>Telefone</label> 
+                <input type = "text" name = "telefone" />
                 <br />
 
                 <label>Senha</label>
