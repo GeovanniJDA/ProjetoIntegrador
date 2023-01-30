@@ -77,13 +77,12 @@ https://templatemo.com/tm-570-chain-app-dev
         <div class="social_login">
             <form action="login.php" method="POST">
                 <label>CPF</label>
-                <input type="text" name="cpf" />
-                <br />
+                <input type="text" name="cpf" required/>
+                <br/>
 
                 <label>Senha</label>
-                <input type="password" name="senha" />
-                <br />
-
+                <input type="password" name="senha" required/>
+                <br/>
                 <div class="action_btns">
                     <button type = "submit" class="one_half btn"> Login </button>
                     <button id="register_form" class="one_half last btn"> Registrar-se </button>
@@ -95,34 +94,34 @@ https://templatemo.com/tm-570-chain-app-dev
         <div class="user_register">
             <form method = "POST" action = "registro_denunciante.php" >
                 <label>Nome completo</label>
-                <input type = "text" name = "nome" />
+                <input type = "text" name = "nome" required/>
                 <br />
 
                 <label>CPF</label> 
-                <input type = "text" name = "cpf" />
+                <input type = "text" name = "cpf" required/>
                 <br />
 
                 <label>Data de nascimento</label> 
-                <input type = "date" name = "data_de_nascimento"/>
+                <input type = "date" name = "data_de_nascimento" required/>
                 <br />
 
-                <label for="inputState">sexo</label>
-                  <select id="inputState" class="form-control" name = "sexo">
+                <label for="inputState">Sexo</label>
+                  <select id="inputState" class="form-control" name = "sexo" required>
                     <option>Feminino</option>
                     <option>Masculino</option>
                   </select>
                 <br />
 
                 <label>Email</label> 
-                <input type = "email" name = "email" />
+                <input type = "email" name = "email" required/>
                 <br />
 
                 <label>Telefone</label> 
-                <input type = "text" name = "telefone" />
+                <input type = "text" id="tel" name = "telefone" required/>
                 <br />
 
                 <label>Senha</label>
-                <input type = "password" name = "senha" />
+                <input type = "password" name = "senha" required/>
                 <br />
  
                 <div class="action_btns">
@@ -136,28 +135,28 @@ https://templatemo.com/tm-570-chain-app-dev
         <div class="agente_publico_register">
           <form method = "POST" action = "registro.php" >
               <label>Nome completo</label>
-              <input type = "text" name = "nome" />
+              <input type = "text" name = "nome" required/>
               <br />
 
               <label>CPF</label> 
-              <input type = "text" name = "cpf"/>
+              <input type = "text" name = "cpf" required/>
               <br />
 
               <label>Telefone</label> 
-              <input type = "tel" id="tel" name="tel"/>
+              <input type = "tel" id="tel" name="tel" required/>
               <br />
 
               <label>Email</label> 
-              <input type = "email" name = "email" />
+              <input type = "email" name = "email" required/>
               <br />
 
               <label>Senha</label>
-              <input type = "password" name = "senha" />
+              <input type = "password" name = "senha" required/>
               <br />
               
                 <div class="form-group cent agente_publico_register">
                   <label for="inputState">Cargo</label>
-                  <select id="inputState" class="form-control">
+                  <select id="inputState" class="form-control" required>
                     <option selected>Selecione seu Cargo</option>
                     <option>Acre (AC)</option>
                     <option>Alagoas (AL)</option>
@@ -200,19 +199,19 @@ https://templatemo.com/tm-570-chain-app-dev
       <div class="agente_publico_endereco">
         <form method = "POST" action = "registro.php" >
             <label>Rua</label>
-            <input type = "text" name = "rua" />
+            <input type = "text" name = "rua" required/>
             <br />
 
             <label>Número</label> 
-            <input type = "text" name = "numero" />
+            <input type = "text" name = "numero" required/>
             <br />
 
             <label>Bairro</label> 
-            <input type = "text" name = "bairro"/>
+            <input type = "text" name = "bairro" required/>
             <br />
 
             <label>CEP</label> 
-            <input type = "text" name = "cep"/>
+            <input type = "text" name = "cep" required/>
             <br />
 
             <div class="action_btns">

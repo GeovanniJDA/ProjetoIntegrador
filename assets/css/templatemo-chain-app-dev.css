@@ -1867,7 +1867,7 @@ a.btn_red {
 .social_login input[type="text"],
 .social_login input[type="password"] {
   display: block;
-  width: 90%;
+  width: 100%;
   padding: 10px;
   border: 1px solid #DDD;
   color: #666;
@@ -1875,7 +1875,7 @@ a.btn_red {
 
 .social_login input[type="checkbox"] {
   float: left;
-  margin-right: 10px;
+  margin-right: 20px;
   width: 20px;
   height: 20px;
 }
@@ -1897,7 +1897,7 @@ a.btn_red {
   overflow: hidden;
   text-decoration: none;
   color: #4b8ef1;
-  transition: all .3s;
+  transition: all .2s;
 }
 /* User Register Form */
 
@@ -1908,11 +1908,12 @@ a.btn_red {
 .user_register label {
   color: #000000;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .user_register input[type="text"],
 .user_register input[type="email"],
+.user_register input[type="tel"],
 .user_register input[type="password"],
 .user_register input[type="date"]{
   display: block;
@@ -1926,7 +1927,7 @@ a.btn_red {
   width: 20px;
   height: 20px;
   float: left;
-  margin-right: 8px;
+  margin-right: 0px;
 }
 
 .user_register input[type="checkbox"]+label {
@@ -1935,7 +1936,7 @@ a.btn_red {
 }
 
 .user_register .checkbox {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   clear: both;
   overflow: hidden;
 }
