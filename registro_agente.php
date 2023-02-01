@@ -11,9 +11,12 @@ $rua = $_POST['rua'];
 $numero = $_POST['numero'];
 $bairro = $_POST['bairro'];
 $cep = $_POST['cep'];
+$estado = $_POST['estado'];
+$cidade = $_POST['cidade'];
+
 
 $sql= "INSERT INTO agente_publico VALUES ('$cpf','$nome','$cargo','$email','$telefone')";
-$sql= "INSERT INTO endereco_agente_publico VALUES ('$rua','$numero','$bairro','$cep')";
+$sql= "INSERT INTO endereco_agente_publico VALUES ('$rua','$numero','$bairro','$cep','$estado','$cidade')";
 
 if(mysqli_query($conexao,$sql)){
     header('Location:pagina_secundaria.html');
