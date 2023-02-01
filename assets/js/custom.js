@@ -87,7 +87,14 @@ $(function() {
       $(".agente_publico_register").show();
       $(".agente_publico_endereco").hide();
       return false;
-  });
+    });
+
+    $(".advance_btn").click(function() {
+      $(".header_title").text('Cadastro do Agente Publico');
+      $(".agente_publico_endereco").show();
+      $(".agente_publico_register").hide();
+      return false;
+    });
 });
 
 const tel = document.getElementById('tel') // Seletor do campo de telefone

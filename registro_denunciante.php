@@ -12,7 +12,7 @@ $senha = $_POST['senha'];
 $sql= "INSERT INTO denunciante VALUES ('$cpf','$nome','$data_de_nascimento','$sexo','$email','$telefone','$senha')";
 
 if(mysqli_query($conexao,$sql)){
-    header('Location:pagina_principal.html');
+    header('Location:pagina_denunciante.html');
 }else{
 
     echo  "<script>alert('Ops! Algo deu errado');</script>";

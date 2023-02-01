@@ -93,37 +93,44 @@ https://templatemo.com/tm-570-chain-app-dev
         <!-- Register Form -->
         <div class="user_register">
             <form method = "POST" action = "registro_denunciante.php" >
+              <div>
                 <label>Nome completo</label>
                 <input type = "text" name = "nome" required/>
                 <br />
-
+              </div>
+              <div>
                 <label>CPF</label> 
                 <input type = "text" name = "cpf" required/>
-                <br />
-
+              <br />
+              </div>
+              <div>
                 <label>Data de nascimento</label> 
                 <input type = "date" name = "data_de_nascimento" required/>
                 <br />
-
+              </div>
+              <div>
                 <label for="inputState">Sexo</label>
                   <select id="inputState" class="form-control" name = "sexo" required>
                     <option>Feminino</option>
                     <option>Masculino</option>
                   </select>
                 <br />
-
+              </div>
+              <div>
                 <label>Email</label> 
                 <input type = "email" name = "email" required/>
                 <br />
-
+              </div>
+              <div>
                 <label>Telefone</label> 
                 <input type = "tel" name = "telefone" required/>
                 <br />
-
+              </div>
+              <div>
                 <label>Senha</label>
                 <input type = "password" name = "senha" required/>
                 <br />
- 
+              </div>
                 <div class="action_btns">
                     <div class="one_half"><a href="#" class="btn back_btn"> Voltar </a></div>
                     <button type= "submit" class="one_half last btn"> Registrar </button>
@@ -131,32 +138,37 @@ https://templatemo.com/tm-570-chain-app-dev
             </form>
             <a id="register_form_agente_publico" href="#" class="agente_publico_link">Agente Publico?</a>
         </div>
-
+      <form method = "POST" action = "registro_agente.php">
         <div class="agente_publico_register">
-          <form method = "POST" action = "registro.php" >
+          <form>
+            <div>
               <label>Nome completo</label>
-              <input type = "text" name = "nome" required/>
+              <input  type = "text" name = "nome" required/>
               <br />
-
+            </div>
+            <div>
               <label>CPF</label> 
               <input type = "text" name = "cpf" required/>
               <br />
-
+            </div>
+            <div>
               <label>Telefone</label> 
               <input type = "tel" name="telefone" required/>
               <br />
-
+            </div>
+            <div>
               <label>Email</label> 
               <input type = "email" name = "email" required/>
               <br />
-
+            </div>
+            <div>
               <label>Senha</label>
               <input type = "password" name = "senha" required/>
               <br />
-              
+            </div>
                 <div class="form-group cent agente_publico_register">
                   <label for="inputState">Cargo</label>
-                  <select id="inputState" class="form-control" required>
+                  <select id="inputState" class="form-control" type = "text" name = "cargo" required>
                     <option selected>Selecione seu Cargo</option>
                     <option>Acre (AC)</option>
                     <option>Alagoas (AL)</option>
@@ -187,40 +199,14 @@ https://templatemo.com/tm-570-chain-app-dev
                     <option>Tocantins (TO)</option>
                   </select>
                 </div>
-                
-
+      
               <div class="action_btns">
                   <div class="one_half"><a href="#" class="btn back_btn"> Voltar </a></div>
-                  <button type="submit" id="register_form_agente_publico_endereco" class="one_half last btn"> Proximo </button>
+                  <button type="submit" class="one_half last btn advance_btn" required> Registrar </button>
               </div>
           </form>
-      </div>
-
-      <div class="agente_publico_endereco">
-        <form method = "POST" action = "registro.php" >
-            <label>Rua</label>
-            <input type = "text" name = "rua" required/>
-            <br />
-
-            <label>Número</label> 
-            <input type = "text" name = "numero" required/>
-            <br />
-
-            <label>Bairro</label> 
-            <input type = "text" name = "bairro" required/>
-            <br />
-
-            <label>CEP</label> 
-            <input type = "text" name = "cep" required/>
-            <br />
-
-            <div class="action_btns">
-                <div class="one_half"><a href="#" class="btn back_btn1"> Voltar </a></div>
-                <button type= "submit" class="one_half last btn"> Registrar </button>
-            </div>
-        </form>
-      </div>
-
+        </div>
+      </form>
     </section>
 </div>
 

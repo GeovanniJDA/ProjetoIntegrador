@@ -1890,7 +1890,8 @@ a.btn_red {
   overflow: hidden;
 }
 
-.agente_publico_link {
+.input {
+  float: left;
   display: block;
   margin: 20px 0 10px;
   clear: both;
