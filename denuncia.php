@@ -9,8 +9,15 @@ $cep = $_POST['cep'];
 $nome_CE = $_POST['nome_CE'];
 $telefone = $_POST['telefone'];
 
+$protocolo = $_POST['protocolo'];
+$corpo = $_POST['corpo'];
+$data = $_POST['data'];
+$hora = $_POST['hora'];
+
 $sql= "INSERT INTO endereco VALUES ('$rua','$numero','$bairro','$cep')";
 $sql= "INSERT INTO endereco VALUES ('$nome_CE','$telefone')";
+$sql= "INSERT INTO endereco VALUES ('$protocolo','$corpo','$data','$hora')";
+
 
 if(mysqli_query($conexao,$sql)){
     header('Location:pagina_principal.php');
