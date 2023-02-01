@@ -17,8 +17,8 @@ $data = $_POST['data'];
 $hora = $_POST['hora'];
 
 $sql= "INSERT INTO endereco VALUES ('$rua','$numero','$bairro','$cep','$estado','$cidade')";
-$sql= "INSERT INTO endereco VALUES ('$nome_CE','$telefone')";
-$sql= "INSERT INTO endereco VALUES ('$protocolo','$corpo','$data','$hora')";
+$sql= "INSERT INTO contato_emergencial VALUES ('$nome_CE','$telefone')";
+$sql= "INSERT INTO denuncia VALUES ('$protocolo','$corpo','$data','$hora')";
 
 
 if(mysqli_query($conexao,$sql)){
