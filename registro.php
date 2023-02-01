@@ -3,19 +3,17 @@ include('conexao.php');
 
 $cpf = $_POST['cpf'];
 $nome = $_POST['nome'];
-$data_nascimento = $_POST['data_nascimento'];
+$data_de_nascimento = $_POST['data_de_nascimento'];
+$sexo = $_POST['sexo'];
 $email = $_POST['email'];
-$senha = $_POST['senha'];
+$telefone = $_POST['telefone'];
 
-$sql= "INSERT INTO usuario VALUES ('$nome',$cpf,'$data_nascimento','$email','$senha')";
+$sql= "INSERT INTO denunciante VALUES ('$cpf',$nome,'$data_de_nascimento','$sexo','$email','$telefone')";
 
 if(mysqli_query($conexao,$sql)){
     header('Location:visualizar.php');
 }
 
 mysqli_close($conexao);
-
-
-
 
 ?>
