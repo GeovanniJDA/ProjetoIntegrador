@@ -294,8 +294,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
-  overflow: hidden;
+  padding-bottom: 130px;
 }
 
 .section-bg {
@@ -303,7 +302,10 @@ section {
 }
 
 .section-title {
-  padding-bottom: 30px;
+  padding: 30px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
 .section-title h2 {
@@ -328,6 +330,26 @@ section {
 
 .section-title p {
   margin-bottom: 0;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*--------------------------------------------------------------
