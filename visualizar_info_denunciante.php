@@ -22,6 +22,21 @@ for ($i = 0;$i < $numero_de_linhas;$i++){
 
 }
 
+#Estabelecer a Conexão com Banco de Dados
+$sql = "select * from endereco where cpf = '$cpf' ";
+
+#Resultado armazena os dados que estão na tebala de BD
+$resultado = mysqli_query($conexao,$sql);
+#Serve para saber o numero de linhas que existem no retorno da informação
+$numero_de_linhas = mysqli_num_rows($resultado);
+
+for ($i = 0;$i < $numero_de_linhas;$i++){
+     $linha = mysqli_fetch_row($resultado);
+
+     echo "linha[$i]: Rua:   ".$linha[1]." - Numero:  ".$linha[2]." - Bairro:  ".$linha[3]." - CEP:   ".$linha[4]." - Estado:  ".$linha[4]." - Cidade:  ".$linha[5]."<br/>";
+
+}
+
 mysqli_close($conexao);
 
 ?>

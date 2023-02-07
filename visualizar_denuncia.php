@@ -18,8 +18,8 @@ $numero_de_linhas = mysqli_num_rows($resultado);
 for ($i = 0;$i < $numero_de_linhas;$i++){
      $linha = mysqli_fetch_row($resultado);
 
-     echo "linha[$i]: Protocolo:  ".$linha[0]." - Corpo:   ".$linha[1]." - Data de Nascimento:  ".$linha[2]." - Hora:  ".$linha[3]." - CPF:   ".$linha[4]."<br/>";
-
+     echo "linha[$i]: Protocolo: ".$linha[0]. " Corpo: ".$linha[1]." Data: ".$linha[2]." Hora: ".$linha[3]."<br/>";
+ 
 }
 
 mysqli_close($conexao);

@@ -1,28 +1,17 @@
 <?php
 include('conexao.php');
 
-$rua = $_POST['rua'];
-$numero = $_POST['numero'];
-$bairro = $_POST['bairro'];
-$cep = $_POST['cep'];
-$estado = $_POST['estado'];
-$cidade = $_POST['cidade'];
-
-$nome_CE = $_POST['nome_CE'];
-$telefone = $_POST['telefone'];
-
 $protocolo = $_POST['protocolo'];
 $corpo = $_POST['corpo'];
 $data = $_POST['data'];
 $hora = $_POST['hora'];
+$cpf = $_POST['cpf'];
 
-$sql= "INSERT INTO endereco VALUES ('$rua','$numero','$bairro','$cep','$estado','$cidade')";
-$sql= "INSERT INTO contato_emergencial VALUES ('$nome_CE','$telefone')";
-$sql= "INSERT INTO denuncia VALUES ('$protocolo','$corpo','$data','$hora')";
+$sql= "INSERT INTO denuncia VALUES ('$protocolo','$corpo','$data','$hora','$cpf')";
 
 
 if(mysqli_query($conexao,$sql)){
-    header('Location:pagina_principal.php');
+    echo "Deletado!";
 }
 
 mysqli_close($conexao);
