@@ -9,13 +9,13 @@ $cep = $_POST['cep'];
 $estado = $_POST['estado'];
 $cidade = $_POST['cidade'];
 
-$sql= "INSERT INTO endereco_agente_publico VALUES ('$cpf','$rua','$numero','$bairro','$cep','$estado','$cidade')";
+$sql= "INSERT INTO endereco VALUES ('$cpf','$rua','$numero','$bairro','$cep','$estado','$cidade')";
 
 if(mysqli_query($conexao,$sql)){
     header('Location:index_agente.html');
 }else{
 
-    header('Location:pagina_agente_endereco.html');
+    header('Location:pagina_denunciante_endereco.html');
 }
 
 mysqli_close($conexao);

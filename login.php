@@ -27,10 +27,9 @@ if(isset($_POST['cpf']) || isset($_POST['senha'])){
         $_SESSION['user'] = $usuario['cpf'];
         $_SESSION['user'] = $usuario['senha'];
 
-        header('Location:pagina_principal.html');
-    }else {
+        header('Location:index_denunciante.html');
+    }else {s
 
-        echo  "<script>alert('Erro!');</script>";
         header('Location:index.html');
     }
     
@@ -56,10 +55,9 @@ elseif(isset($_POST['cpf']) || isset($_POST['senha'])){
         $_SESSION['user'] = $usuario['cpf'];
         $_SESSION['user'] = $usuario['senha'];
 
-        header('Location:pagina_secundaria.html');
+        header('Location:index_agente.html');
     }else {
 
-        echo  "<script>alert('Erro!');</script>";
         header('Location:index.html');
     }
 }
