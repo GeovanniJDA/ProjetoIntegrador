@@ -3,7 +3,7 @@ include('conexao.php');
 
 $cpf = $_POST['cpf'];
 $novo_nome = $_POST['name'];
-$nova_cargo = $_POST['cargo'];
+$novo_cargo = $_POST['cargo'];
 $novo_email = $_POST['email'];
 $novo_telefone = $_POST['telefone'];
 $nova_senha = $_POST['senha'];
