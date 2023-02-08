@@ -64,13 +64,6 @@ $(function() {
       return false;
   });
 
-  $("#register_form_agente_publico_endereco").click(function() {
-    $(".user_register").hide();
-    $(".agente_publico_register").hide();
-    $(".agente_publico_endereco").show();
-    $(".header_title").text('Cadastro do Agente Publico');
-    return false;
-});
 
 		// Going back to Social Forms
 		$(".back_btn").click(function() {

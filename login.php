@@ -60,7 +60,10 @@ elseif(isset($_POST['cpf']) || isset($_POST['senha'])){
 
         header('Location:index.html');
     }
+}else {
+    header('Location:index.html');
 }
+
 
 mysqli_close($conexao);
 
