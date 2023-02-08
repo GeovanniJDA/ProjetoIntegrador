@@ -15,7 +15,7 @@ if(mysqli_query($conexao,$sql)){
     header('Location:index_agente.html');
 }else{
 
-    header('Location:pagina_denunciante_endereco.html');
+    header('Location:pagina_endereco_denunciante.html');
 }
 
 mysqli_close($conexao);
