@@ -12,7 +12,7 @@ $cidade = $_POST['cidade'];
 $sql= "INSERT INTO endereco VALUES ('$cpf','$rua','$numero','$bairro','$cep','$estado','$cidade')";
 
 if(mysqli_query($conexao,$sql)){
-    header('Location:index_agente.html');
+    header('Location:index_denunciante.html');
 }else{
 
     header('Location:pagina_endereco_denunciante.html');
