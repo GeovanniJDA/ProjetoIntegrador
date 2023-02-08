@@ -112,12 +112,16 @@
           <div class="row" data-aos="fade-in">
   
             <div class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form action="denuncia.php" method="post" role="form" class="php-email-form">
 
               <div class="row">
                 <div class="form-group col-md-10">
                   <label for="name">Informe sua denuncia</label>
-                  <textarea class="form-control" name="denuncia" rows="10" required></textarea>
+                  <textarea class="form-control" name="denuncia" rows="10" id="denuncia" required></textarea>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="name">CPF</label>
+                <input type="text" class="form-control" name="cpf" id="cpf" required>
               </div>
               </div>
                 <div class="my-3">
