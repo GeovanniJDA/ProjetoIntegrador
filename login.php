@@ -28,7 +28,7 @@ if(isset($_POST['cpf']) || isset($_POST['senha'])){
         $_SESSION['user'] = $usuario['senha'];
 
         header('Location:index_denunciante.html');
-    }else {s
+    }else {
 
         header('Location:index.html');
     }
