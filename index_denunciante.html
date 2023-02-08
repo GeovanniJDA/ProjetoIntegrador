@@ -71,6 +71,7 @@
         <div class="section-title">
           <h2>Perfil</h2>
         </div>
+        <br/>
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
@@ -108,6 +109,7 @@
           <div class="section-title">
             <h2>Denuncias</h2>
           </div>
+          
   
           <div class="row" data-aos="fade-in">
   
@@ -142,6 +144,7 @@
         <div class="section-title">
           <h2>Atualização cadastral</h2>
         </div>
+        
 
         <div class="row" data-aos="fade-in">
 
@@ -156,28 +159,121 @@
                   <label for="name">CPF</label>
                   <input type="text" class="form-control" name="cpf" id="cpf" required>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-2">
                     <label for="name">Data de Nascimento</label>
                     <input type="date" class="form-control" name="data_de_nascimento" id="data_de_nascimento" required>
                   </div>
+                  <div class="form-group col-md-3">
+                    <label for="name">Sexo</label>
+                    <select id="inputState" class="form-control" name = "sexo" required>
+                        <option>Feminino</option>
+                        <option>Masculino</option>
+                      </select>
+                  </div>
               </div>
-              <div class="row">
-              <div class="form-group col-md-5">
-                <label for="name">Sexo</label>
-                <select id="inputState" class="form-control" name = "sexo" required>
-                    <option>Feminino</option>
-                    <option>Masculino</option>
-                  </select>
-              </div>
-            </div>
             <div class="row">
-              <div class="form-group col-md-5">
+            <div class="form-group col-md-4">
                 <label for="name">Email</label>
                 <input type="email" class="form-control" name="email" id="email" required>
               </div>
-              <div class="form-group col-md-5">
+              <div class="form-group col-md-4">
+                <label for="name">Senha</label>
+                <input type="password" class="form-control" name="senha" id="senha" required>
+              </div>
+              <div class="form-group col-md-3">
                 <label for="name">Telefone</label>
                 <input type="text" class="form-control" name="telefone" id="telefone" required>
+              </div>
+            </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Atualizar</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Atualização do Endereço</h2>
+        </div>
+      
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="atualizar_dados_denunciante_2.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-3">
+                  <label for="name">CPF</label>
+                  <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Informe o cpf cadastrado" required>
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="name">Rua</label>
+                  <input type="text" name="rua" class="form-control" id="rua" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="name">N°</label>
+                    <input type="text" class="form-control" name="numero" id="numero" placeholder="Número da casa, apartemento..." required>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="name">Cidade</label>
+                    <input type="text" class="form-control" name="cidade" id="cidade" required>
+                  </div>
+              </div>
+            <div class="row">
+            <div class="form-group col-md-3">
+                <label for="name">Email</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="name">Senha</label>
+                <input type="password" class="form-control" name="senha" id="senha" required>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="name">CEP</label>
+                <input type="text" class="form-control" name="cep" id="cep" required>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputState">Estado</label>
+                <select id="inputState" class="form-control" name="estado" id="estado" required>
+                  <option selected>Selecione sua Região</option>
+                  <option>Acre (AC)</option>
+                  <option>Alagoas (AL)</option>
+                  <option>Amapá (AP)</option>
+                  <option>Amazonas (AM)</option>
+                  <option>Bahia (BA)</option>
+                  <option>Ceará (CE)</option>
+                  <option>Distrito Federal (DF)</option>
+                  <option>Espírito Santo (ES)</option>
+                  <option>Goiás (GO)</option>
+                  <option>Maranhão (MA)</option>
+                  <option>Mato Grosso (MT)</option>
+                  <option>Mato Grosso do Sul (MS)</option>
+                  <option>Minas Gerais (MG)</option>
+                  <option>Pará (PA)</option>
+                  <option>Paraíba (PB)</option>
+                  <option>Paraná (PR)</option>
+                  <option>Pernambuco (PE)</option>
+                  <option>Piauí (PI)</option>
+                  <option>Rio de Janeiro (RJ)</option>
+                  <option>Rio Grande do Sul (RS)</option>
+                  <option>Rio Grande do Norte (RN)</option>
+                  <option>Rondônia (RO)</option>
+                  <option>Roraima (RR)</option>
+                  <option>Santa Catarina (SC)</option>
+                  <option>São Paulo (SP)</option>
+                  <option>Sergipe (SE)</option>
+                  <option>Tocantins (TO)</option>
+                </select>
               </div>
             </div>
               <div class="my-3">
