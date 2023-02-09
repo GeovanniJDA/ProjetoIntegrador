@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 
-
 </head>
 
 
@@ -89,15 +88,6 @@
             <div class="form-group col-lg-3 cent">
               <label for="inputAddress2">CEP</label>
               <input  type="text" class="form-control" name="cep" id="inputAddress2" placeholder="Digite aqui o N° do CEP de sua Região">
-            </div>
-        </div>
-
-          <hr><h4 class = "ml-4">Informe novamente o CPF para confirmar :</h4><hr/>
-          
-        <div class="form-row" >
-            <div class="form-group col-lg-3 cent">
-              <label for="inputAddress2">CPF</label>
-              <input  type="text" class="form-control" name="cpf" id="inputAddress2" placeholder="Digite aqui o seu CPF">
             </div>
         </div>
     </div>

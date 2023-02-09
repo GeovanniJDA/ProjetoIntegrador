@@ -1,7 +1,9 @@
 <?php
 include('conexao.php');
 
-$cpf = $_POST['cpf'];
+session_start();
+
+$cpf = $_SESSION['cpf'];
 $novo_nome = $_POST['name'];
 $novo_cargo = $_POST['cargo'];
 $novo_email = $_POST['email'];

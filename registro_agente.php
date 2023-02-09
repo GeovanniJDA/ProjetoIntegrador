@@ -1,6 +1,8 @@
 <?php
 include('conexao.php');
 
+session_start();
+
 $cpf = $_POST['cpf'];
 $nome = $_POST['nome'];
 $cargo = $_POST['cargo'];
@@ -13,7 +15,8 @@ $sql= "INSERT INTO agente_publico VALUES ('$cpf','$nome','$cargo','$email','$tel
 
 
 if(mysqli_query($conexao,$sql)){
-    header('Location:pagina_endereco_agente.html');
+    $_SESSION['cpf'] = $_POST['cpf'];
+    header('Location:pagina_endereco_agente.php');
 }else{  
     header('Location:index.html');
 }

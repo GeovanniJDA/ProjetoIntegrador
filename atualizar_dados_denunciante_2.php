@@ -1,7 +1,9 @@
 <?php
 include('conexao.php');
 
-$cpf = $_POST['cpf'];
+session_start();
+
+$cpf = $_SESSION['cpf'];
 $nova_rua = $_POST['rua'];
 $novo_numero = $_POST['numero'];
 $novo_bairro = $_POST['bairro'];

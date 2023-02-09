@@ -1,7 +1,9 @@
 <?php
 include('conexao.php');
 
-$cpf = $_POST['cpf'];
+session_start();
+
+$cpf = $_SESSION['cpf'];
 
 $sql = "DELETE * FROM denuncia WHERE cpf = $cpf";
 

@@ -91,7 +91,9 @@
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>textoa ser inserido:</strong> <span>textoa ser inserido</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Cargo:</strong> <span>textoa ser inserido</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>textoa ser inserido:</strong> <span>textoa ser inserido</span></li>
                 </ul>
               </div>
             </div>
@@ -101,43 +103,84 @@
       </div>
     </section>
     <!-- ======= Resume Section ======= -->
-    <section id="resume" class="contact">
-        <div class="container">
-  
-          <div class="section-title">
-            <h2>Denuncias</h2>
-          </div>
-          
-  
-          <div class="row" data-aos="fade-in">
-  
-            <div class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="denuncia.php" method="post" role="form" class="php-email-form">
+    <section id="resume" class="resume">
+      <div class="container">
 
-              <div class="row">
-                <div class="form-group col-md-10">
-                  <label for="name">Informe sua denuncia</label>
-                  <textarea class="form-control" name="denuncia" rows="10" id="denuncia" required></textarea>
-              </div>
-              <div class="form-group col-md-3">
-                <label for="name">CPF</label>
-                <input type="text" class="form-control" name="cpf" id="cpf" required>
-              </div>
-              </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Enviar</button></div>
-              </form>
-            </div>
-  
-          </div>
-  
+        <div class="section-title">
+          <h2>Denuncias</h2>
         </div>
-      </section>
-    <!-- End Resume Section -->
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Protocolo</h3>
+            <div class="resume-item pb-0">
+              <h4>Nome da vitima</h4>
+              <p><em>Denuncia</em></p>
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Protocolo</h3>
+            <div class="resume-item pb-0">
+              <h4>Nome da vitima</h4>
+              <p><em>Denuncia</em></p>
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Protocolo</h3>
+            <div class="resume-item pb-0">
+              <h4>Nome da vitima</h4>
+              <p><em>Denuncia</em></p>
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Protocolo</h3>
+            <div class="resume-item pb-0">
+              <h4>Nome da vitima</h4>
+              <p><em>Denuncia</em></p>
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+            </div>
+            <h3 class="resume-title">Protocolo</h3>
+            <div class="resume-item pb-0">
+              <h4>Nome da vitima</h4>
+              <p><em>Denuncia</em></p>
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+            </div>
+            <h3 class="resume-title">Protocolo</h3>
+            <div class="resume-item pb-0">
+              <h4>Nome da vitima</h4>
+              <p><em>Denuncia</em></p>
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -146,39 +189,34 @@
         <div class="section-title">
           <h2>Atualização cadastral</h2>
         </div>
-        
 
         <div class="row" data-aos="fade-in">
 
           <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="atualizar_dados_denunciante.php" method="post" role="form" class="php-email-form">
+            <form action="atualizar_dados_agente.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-4">
                   <label for="name">Nome completo</label>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-3">
-                  <label for="name">CPF</label>
-                  <input type="text" class="form-control" name="cpf" id="cpf" required>
+                  <label for="inputState">Cargo</label>
+                  <select id="inputState" class="form-control" type = "text" name = "cargo" required>
+                    <option selected>Selecione seu Cargo</option>
+                    <option>Servidores públicos</option>
+                    <option>Empregados públicos</option>
+                    <option>Contratados temporários</option>
+                    <option>Agentes delegados</option>
+                    <option>Agentes credenciados</option>
+                  </select>
                 </div>
-                <div class="form-group col-md-2">
-                    <label for="name">Data de Nascimento</label>
-                    <input type="date" class="form-control" name="data_de_nascimento" id="data_de_nascimento" required>
-                  </div>
-                  <div class="form-group col-md-3">
-                    <label for="name">Sexo</label>
-                    <select id="inputState" class="form-control" name = "sexo" required>
-                        <option>Feminino</option>
-                        <option>Masculino</option>
-                      </select>
-                  </div>
               </div>
             <div class="row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
                 <label for="name">Email</label>
                 <input type="email" class="form-control" name="email" id="email" required>
               </div>
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-3">
                 <label for="name">Senha</label>
                 <input type="password" class="form-control" name="senha" id="senha" required>
               </div>
@@ -207,77 +245,68 @@
         <div class="section-title">
           <h2>Atualização do Endereço</h2>
         </div>
-      
 
         <div class="row" data-aos="fade-in">
 
           <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="atualizar_dados_denunciante_2.php" method="post" role="form" class="php-email-form">
+            <form action="atualizar_dados_agente2.php" method="post" role="form" class="php-email-form">
               <div class="row">
-                <div class="form-group col-md-3">
-                  <label for="name">CPF</label>
-                  <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Informe o cpf cadastrado" required>
-                </div>
                 <div class="form-group col-md-3">
                   <label for="name">Rua</label>
                   <input type="text" name="rua" class="form-control" id="rua" required>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-2">
                     <label for="name">N°</label>
-                    <input type="text" class="form-control" name="numero" id="numero" placeholder="Número da casa, apartemento..." required>
+                    <input type="text" class="form-control" name="numero" id="numero" placeholder="casa, apartemento..." required>
                   </div>
                   <div class="form-group col-md-3">
                     <label for="name">Cidade</label>
                     <input type="text" class="form-control" name="cidade" id="cidade" required>
                   </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-3">
+                    <label for="name">Bairro</label>
+                    <input type="text" class="form-control" name="bairro" id="bairro" required>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="name">CEP</label>
+                    <input type="text" class="form-control" name="cep" id="cep" required>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputState">Estado</label>
+                    <select id="inputState" class="form-control" name="estado" id="estado" required>
+                      <option selected>Selecione sua Região</option>
+                      <option>Acre (AC)</option>
+                      <option>Alagoas (AL)</option>
+                      <option>Amapá (AP)</option>
+                      <option>Amazonas (AM)</option>
+                      <option>Bahia (BA)</option>
+                      <option>Ceará (CE)</option>
+                      <option>Distrito Federal (DF)</option>
+                      <option>Espírito Santo (ES)</option>
+                      <option>Goiás (GO)</option>
+                      <option>Maranhão (MA)</option>
+                      <option>Mato Grosso (MT)</option>
+                      <option>Mato Grosso do Sul (MS)</option>
+                      <option>Minas Gerais (MG)</option>
+                      <option>Pará (PA)</option>
+                      <option>Paraíba (PB)</option>
+                      <option>Paraná (PR)</option>
+                      <option>Pernambuco (PE)</option>
+                      <option>Piauí (PI)</option>
+                      <option>Rio de Janeiro (RJ)</option>
+                      <option>Rio Grande do Sul (RS)</option>
+                      <option>Rio Grande do Norte (RN)</option>
+                      <option>Rondônia (RO)</option>
+                      <option>Roraima (RR)</option>
+                      <option>Santa Catarina (SC)</option>
+                      <option>São Paulo (SP)</option>
+                      <option>Sergipe (SE)</option>
+                      <option>Tocantins (TO)</option>
+                    </select>
+                  </div>
               </div>
-            <div class="row">
-            <div class="form-group col-md-3">
-                <label for="name">Email</label>
-                <input type="email" class="form-control" name="email" id="email" required>
-              </div>
-              <div class="form-group col-md-3">
-                <label for="name">Senha</label>
-                <input type="password" class="form-control" name="senha" id="senha" required>
-              </div>
-              <div class="form-group col-md-2">
-                <label for="name">CEP</label>
-                <input type="text" class="form-control" name="cep" id="cep" required>
-              </div>
-              <div class="form-group col-md-3">
-                <label for="inputState">Estado</label>
-                <select id="inputState" class="form-control" name="estado" id="estado" required>
-                  <option selected>Selecione sua Região</option>
-                  <option>Acre (AC)</option>
-                  <option>Alagoas (AL)</option>
-                  <option>Amapá (AP)</option>
-                  <option>Amazonas (AM)</option>
-                  <option>Bahia (BA)</option>
-                  <option>Ceará (CE)</option>
-                  <option>Distrito Federal (DF)</option>
-                  <option>Espírito Santo (ES)</option>
-                  <option>Goiás (GO)</option>
-                  <option>Maranhão (MA)</option>
-                  <option>Mato Grosso (MT)</option>
-                  <option>Mato Grosso do Sul (MS)</option>
-                  <option>Minas Gerais (MG)</option>
-                  <option>Pará (PA)</option>
-                  <option>Paraíba (PB)</option>
-                  <option>Paraná (PR)</option>
-                  <option>Pernambuco (PE)</option>
-                  <option>Piauí (PI)</option>
-                  <option>Rio de Janeiro (RJ)</option>
-                  <option>Rio Grande do Sul (RS)</option>
-                  <option>Rio Grande do Norte (RN)</option>
-                  <option>Rondônia (RO)</option>
-                  <option>Roraima (RR)</option>
-                  <option>Santa Catarina (SC)</option>
-                  <option>São Paulo (SP)</option>
-                  <option>Sergipe (SE)</option>
-                  <option>Tocantins (TO)</option>
-                </select>
-              </div>
-            </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
@@ -290,7 +319,8 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>
+    <!-- End Contact Section -->
 
   </main><!-- End #main -->
 
@@ -298,7 +328,7 @@
   <footer id="footer">
     <div class="container">
       <div class="credits">
-        <a href="index.html">Sair</a>
+        <a href="logout.php">Sair</a>
       </div>
     </div>
   </footer><!-- End  Footer -->

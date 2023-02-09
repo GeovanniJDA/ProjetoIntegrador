@@ -1,15 +1,19 @@
 <?php
 include('conexao.php');
 
-$protocolo = $_POST['protocolo'];
-$denuncia = $_POST['denuncia'];
-$cpf = $_POST['cpf'];
+session_start();
 
-$sql= "INSERT INTO denuncia VALUES ('$protocolo','$denuncia','$cpf')";
+$corpo = $_POST['corpo'];
+$cpf = $_SESSION['cpf'];
+$gera = rand(1,100000);
+$gera2 = rand(1,100000)+$gera;
+$protocolo = $gera2;
+
+$sql= "INSERT INTO denuncia VALUES ('$protocolo','$corpo','$cpf')";
 
 
 if(mysqli_query($conexao,$sql)){
-    echo "Deletado!";
+    echo "Sucesso!";
 }
 
 mysqli_close($conexao);

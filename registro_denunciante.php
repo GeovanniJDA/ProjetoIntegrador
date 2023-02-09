@@ -1,6 +1,8 @@
 <?php
 include('conexao.php');
 
+session_start();
+
 $cpf = $_POST['cpf'];
 $nome = $_POST['nome'];
 $data_de_nascimento = $_POST['data_de_nascimento'];
@@ -14,7 +16,8 @@ $sql= "INSERT INTO denunciante VALUES ('$cpf','$nome','$data_de_nascimento','$se
 
 
 if(mysqli_query($conexao,$sql)){
-    header('Location:pagina_endereco_denunciante.html');
+    $_SESSION['cpf'] = $_POST['cpf'];
+    header('Location:pagina_endereco_denunciante.php');
 }else{
     header('Location:index.html');
 }
