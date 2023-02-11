@@ -36,25 +36,25 @@
         <div class="form-row" >
           <div class="form-group col-lg-3 cent" >
             <label for="inputAddress">Rua</label>
-            <input type="text" class="form-control" name="rua" id="inputAddress">
+            <input type="text" class="form-control" name="rua" id="inputAddress" required>
           </div>
           <div class="form-group col-lg-3 cent" >
-            <label for="inputAddress"> N°</label>
-            <input type="text" class="form-control" name="numero" id="inputAddress" placeholder="Digite o numero de sua casa, apartemento..." >
+            <label for="inputAddress"> Número</label>
+            <input type="text" class="form-control" name="numero" id="inputAddress" placeholder="Digite o numero de sua casa, apartemento..." required>
           </div>
           <div class="form-group col-lg-3 cent">
             <label for="inputAddress">Bairro</label>
-            <input type="text" class="form-control" name="bairro" id="inputAddress">
+            <input type="text" class="form-control" name="bairro" id="inputAddress" required>
           </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-3 cent">
               <label for="inputCity">Cidade</label>
-              <input type="text" class="form-control" name="cidade" id="inputCity" placeholder = "Digite o nome de sua cidade">
+              <input type="text" class="form-control" name="cidade" id="inputCity" required>
             </div>
             <div class="form-group col-md-3 cent">
               <label for="inputState">Estado</label>
-              <select id="inputState" class="form-control" name="estado">
+              <select id="inputState" class="form-control" name="estado" required>
                 <option selected>Selecione sua Região</option>
                 <option>Acre (AC)</option>
                 <option>Alagoas (AL)</option>
@@ -87,7 +87,7 @@
             </div>
             <div class="form-group col-lg-3 cent">
               <label for="inputAddress2">CEP</label>
-              <input  type="text" class="form-control" name="cep" id="inputAddress2" placeholder="Digite aqui o N° do CEP de sua Região">
+              <input  type="text" class="form-control" name="cep" id="inputAddress2" required>
             </div>
         </div>
     </div>
