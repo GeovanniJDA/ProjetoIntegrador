@@ -36,21 +36,21 @@
         <div class="form-row" >
           <div class="form-group col-lg-3 cent" >
             <label for="inputAddress">Rua</label>
-            <input type="text" class="form-control" name="rua" id="inputAddress" placeholder="Rua" >
+            <input type="text" class="form-control" name="rua" id="inputAddress">
           </div>
           <div class="form-group col-lg-3 cent" >
-            <label for="inputAddress"> N°</label>
+            <label for="inputAddress"> Número</label>
             <input type="text" class="form-control" name="numero" id="inputAddress" placeholder="Digite o numero de sua casa, apartemento..." >
           </div>
           <div class="form-group col-lg-3 cent">
-            <label for="inputAddress"> Endereço 2</label>
-            <input type="text" class="form-control" name="bairro" id="inputAddress" placeholder="Bairro" >
+            <label for="inputAddress">Bairro</label>
+            <input type="text" class="form-control" name="bairro" id="inputAddress">
           </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-3 cent">
               <label for="inputCity">Cidade</label>
-              <input type="text" class="form-control" name="cidade" id="inputCity" placeholder = "Digite o nome de sua cidade">
+              <input type="text" class="form-control" name="cidade" id="inputCity">
             </div>
             <div class="form-group col-md-3 cent">
               <label for="inputState">Estado</label>
@@ -87,7 +87,7 @@
             </div>
             <div class="form-group col-lg-3 cent">
               <label for="inputAddress2">CEP</label>
-              <input  type="text" class="form-control" name="cep" id="inputAddress2" placeholder="Digite aqui o N° do CEP de sua Região">
+              <input  type="text" class="form-control" name="cep" id="inputAddress2">
             </div>
         </div>
     </div>
