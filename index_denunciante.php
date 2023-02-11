@@ -1,9 +1,15 @@
 <?php
 include('conexao.php');
 
-$usuario = "SELECT * FROM denunciante";
+session_start();
+
+$cpf = $_SESSION['cpf'];
+
+$usuario = "SELECT * FROM denunciante where cpf = '$cpf'";
 $consulta = $conexao->query($usuario) or die ($mysqli->error);
-$denuncia = "SELECT * FROM denuncia";
+$usuario_endereco = "SELECT * FROM endereco where cpf = '$cpf'";
+$consulta_endereco = $conexao->query($usuario_endereco) or die ($mysqli->error);
+$denuncia = "SELECT * FROM denuncia where cpf = '$cpf'";
 $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
 ?>
 
@@ -99,14 +105,14 @@ $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
                 <?php } ?>
               </div>
               <div class="col-lg-6">
-              <?php while ($dados = $consulta->fetch_array()) { ?>
+              <?php while ($dados_endereco = $consulta_endereco->fetch_array()) { ?>
                 <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Cidade:</strong><?php echo $dados["cidade"]; ?></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Rua:</strong><?php echo $dados["rua"]; ?></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Número:</strong><?php echo $dados["numero"]; ?></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Bairro:</strong><?php echo $dados["bairro"]; ?></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>CEP:</strong><?php echo $dados["cep"]; ?></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Estado:</strong><?php echo $dados["estado"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Cidade:</strong><?php echo $dados_endereco["cidade"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Rua:</strong><?php echo $dados_endereco["rua"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Número:</strong><?php echo $dados_endereco["numero"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Bairro:</strong><?php echo $dados_endereco["bairro"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>CEP:</strong><?php echo $dados_endereco["cep"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Estado:</strong><?php echo $dados_endereco["estado"]; ?></li>
                 <?php } ?>
                 </ul>
               </div>
@@ -153,15 +159,27 @@ $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
 
         <div class="section-title">
           <h2>Denuncias</h2>
+        <form>
+          <form action="atualizar_pagina.php">
+          <button type="submit">Atualizar</button>
+          </form>
+          
+          <form action="deletar_todas_denuncias.php">
+          <button type="submit">Excluir todas Denúncias</button></div>
+          </form>
+        </form>
         </div>
-
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
             <div>
             <?php while ($dados = $consulta_denuncia->fetch_array()) { ?>
               <ul>
               </br>
-                <li><?php echo $dados["denuncia"]; ?></li>
+                <li><?php echo $dados["denuncia"]; ?></li><div class="text-center">
+                  <form action="deletar_denuncia.php">
+                  <button type="submit">Excluir</button></div>
+                  </form>
+                  <hr></hr>
               </ul>
             <?php } ?>
             </div>

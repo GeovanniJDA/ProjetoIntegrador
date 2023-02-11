@@ -6,7 +6,10 @@
 
 <?php
 include('conexao.php');
-$cpf = $_POST['cpf'];
+
+session_start();
+
+$cpf = $_SESSION['cpf'];
 #Estabelecer a Conexão com Banco de Dados
 $sql = "select * from denuncia where cpf = '$cpf' ";
 
@@ -18,7 +21,7 @@ $numero_de_linhas = mysqli_num_rows($resultado);
 for ($i = 0;$i < $numero_de_linhas;$i++){
      $linha = mysqli_fetch_row($resultado);
 
-     echo "linha[$i]: Protocolo: ".$linha[0]. " Corpo: ".$linha[1]." Data: ".$linha[2]." Hora: ".$linha[3]."<br/>";
+     echo "linha[$i]: Protocolo: ".$linha[0]. " Corpo: ".$linha[1]." ."<br/>";
  
 }
 

@@ -1,8 +1,14 @@
 <?php
 include('conexao.php');
 
-$usuario = "SELECT * FROM agente_publico";
+session_start();
+
+$cpf = $_SESSION['cpf'];
+
+$usuario = "SELECT * FROM agente_publico where cpf = '$cpf'";
 $consulta = $conexao->query($usuario) or die ($mysqli->error);
+$usuario_endereco = "SELECT * FROM endereco_agente_publico where cpf = '$cpf'";
+$consulta_endereco = $conexao->query($usuario_endereco) or die ($mysqli->error);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +100,7 @@ $consulta = $conexao->query($usuario) or die ($mysqli->error);
                 <?php } ?>
               </div>
               <div class="col-lg-6">
-              <?php while ($dados = $consulta->fetch_array()) { ?>
+              <?php while ($dados = $consulta_endereco->fetch_array()) { ?>
                 <ul>
                 <li><i class="bi bi-chevron-right"></i> <strong>Rua:</strong><?php echo $dados["rua"]; ?></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Número:</strong><?php echo $dados["numero"]; ?></li>
