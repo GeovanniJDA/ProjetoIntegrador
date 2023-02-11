@@ -3,20 +3,15 @@ include('conexao.php');
 
 session_start();
 
-$corpo = $_POST['corpo'];
+$denuncia = $_POST['denuncia'];
 $cpf = $_SESSION['cpf'];
 $gera = rand(1,100000);
 $gera2 = rand(1,100000)+$gera;
 $protocolo = $gera2;
 
-$sql= "INSERT INTO denuncia VALUES ('$protocolo','$corpo','$cpf')";
+$sql= "INSERT INTO denuncia VALUES ('$protocolo','$denuncia','$cpf')";
 
-
-if(mysqli_query($conexao,$sql)){
-    echo "Sucesso!";
-}
-
-mysqli_close($conexao);
+$denuncias = $conexao->query($sql) or die ($conexao);
 
 
 ?>

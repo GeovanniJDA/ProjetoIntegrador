@@ -1,3 +1,9 @@
+<?php
+include('conexao.php');
+
+$usuario = "SELECT * FROM agente_publico";
+$consulta = $conexao->query($usuario) or die ($mysqli->error);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,21 +86,27 @@
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <div class="row">
               <div class="col-lg-6">
+              <?php while ($dados = $consulta->fetch_array()) { ?>
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Nome:</strong> <span>Nome completo do usuario</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Dara de Nascimento:</strong> <span>1 May 1995</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>CPF:</strong> <span>111.111.111-11</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Telefone:</strong> <span>+123 456 7890</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Cidade:</strong> <span>New York, USA</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Nome:</strong><?php echo $dados["nome"]; ?></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>CPF:</strong><?php echo $dados["cpf"]; ?></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Telefone:</strong><?php echo $dados["telefone"]; ?></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong><?php echo $dados["email"]; ?></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Cargo:</strong><?php echo $dados["cargo"]; ?></li>
                 </ul>
+                <?php } ?>
               </div>
               <div class="col-lg-6">
+              <?php while ($dados = $consulta->fetch_array()) { ?>
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>textoa ser inserido:</strong> <span>textoa ser inserido</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Cargo:</strong> <span>textoa ser inserido</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>textoa ser inserido:</strong> <span>textoa ser inserido</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Rua:</strong><?php echo $dados["rua"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Número:</strong><?php echo $dados["numero"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Bairro:</strong><?php echo $dados["bairro"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Cidade:</strong><?php echo $dados["cidade"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Estado:</strong><?php echo $dados["estado"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>CEP:</strong><?php echo $dados["cep"]; ?></li>
                 </ul>
+              <?php } ?>
               </div>
             </div>
           </div>

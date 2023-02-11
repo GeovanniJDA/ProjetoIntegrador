@@ -35,16 +35,16 @@
       <div>
         <div class="form-row" >
           <div class="form-group col-lg-3 cent" >
-            <label for="inputAddress"> Endereço</label>
-            <input type="text" class="form-control" name="rua" id="inputAddress" placeholder="Rua" >
+            <label for="inputAddress">Rua</label>
+            <input type="text" class="form-control" name="rua" id="inputAddress">
           </div>
           <div class="form-group col-lg-3 cent" >
             <label for="inputAddress"> N°</label>
             <input type="text" class="form-control" name="numero" id="inputAddress" placeholder="Digite o numero de sua casa, apartemento..." >
           </div>
           <div class="form-group col-lg-3 cent">
-            <label for="inputAddress"> Endereço 2</label>
-            <input type="text" class="form-control" name="bairro" id="inputAddress" placeholder="Bairro" >
+            <label for="inputAddress">Bairro</label>
+            <input type="text" class="form-control" name="bairro" id="inputAddress">
           </div>
         </div>
         <div class="form-row">

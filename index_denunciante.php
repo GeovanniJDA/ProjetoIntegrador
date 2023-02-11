@@ -1,3 +1,12 @@
+<?php
+include('conexao.php');
+
+$usuario = "SELECT * FROM denunciante";
+$consulta = $conexao->query($usuario) or die ($mysqli->error);
+$denuncia = "SELECT * FROM denuncia";
+$consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,18 +89,28 @@
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <div class="row">
               <div class="col-lg-6">
+                <?php while ($dados = $consulta->fetch_array()) { ?>
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Nome:</strong> <span>Nome completo do usuario</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Dara de Nascimento:</strong> <span>1 May 1995</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>CPF:</strong> <span>111.111.111-11</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Telefone:</strong> <span>+123 456 7890</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Cidade:</strong> <span>New York, USA</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Nome:</strong><?php echo $dados["nome"]; ?></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Dara de Nascimento:</strong><?php echo $dados["data_de_nascimento"]; ?></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>CPF:</strong><?php echo $dados["cpf"]; ?></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Sexo:</strong><?php echo $dados["sexo"]; ?></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Telefone:</strong><?php echo $dados["telefone"]; ?></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong><?php echo $dados["email"]; ?></li>
+                  
                 </ul>
+                <?php } ?>
               </div>
               <div class="col-lg-6">
+              <?php while ($dados = $consulta->fetch_array()) { ?>
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>textoa ser inserido:</strong> <span>textoa ser inserido</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Cidade:</strong><?php echo $dados["cidade"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Rua:</strong><?php echo $dados["rua"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Número:</strong><?php echo $dados["numero"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Bairro:</strong><?php echo $dados["bairro"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>CEP:</strong><?php echo $dados["cep"]; ?></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Estado:</strong><?php echo $dados["estado"]; ?></li>
+                <?php } ?>
                 </ul>
               </div>
             </div>
@@ -113,26 +132,47 @@
   
             <div class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch">
               <form action="denuncia.php" method="post" role="form" class="php-email-form">
-
-              <div class="row">
-                <div class="form-group col-md-10">
-                  <label for="name">Informe sua denuncia</label>
-                  <textarea class="form-control" name="corpo" rows="10" id="corpo" required></textarea>
-                </div>
-              </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Enviar</button></div>
-              </form>
+                  <div class="row">
+                        <div class="form-group col-md-10">
+                          <label for="name">Informe sua denuncia</label>
+                          <textarea class="form-control" name="denuncia" rows="10" id="denuncia" required></textarea>
+                        </div>
+        
+                        <div class="my-3">
+                          <div class="loading">Enviando</div>
+                          <div class="sent-message">Your message has been sent. Thank you!</div>
+                          <div class="error-message"></div>
+                        </div>
+                        <div><button class="text-start" type="submit">Enviar</button></div>
+                   </div>
+               </form>
             </div>
-  
           </div>
-  
         </div>
       </section>
+
+      <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Denuncias</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div>
+            <?php while ($dados = $consulta_denuncia->fetch_array()) { ?>
+              <ul>
+              </br>
+                <li><?php echo $dados["denuncia"]; ?></li>
+              </ul>
+            <?php } ?>
+            </div>
+
+        </div>
+
+      </div>
+    </section>
     <!-- End Resume Section -->
 
     <!-- ======= Contact Section ======= -->
