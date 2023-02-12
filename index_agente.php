@@ -4,12 +4,23 @@ include('conexao.php');
 session_start();
 
 $cpf = $_SESSION['cpf'];
+
 $usuario = "SELECT * FROM agente_publico where cpf = '$cpf'";
 $consulta = $conexao->query($usuario) or die ($mysqli->error);
 $usuario_endereco = "SELECT * FROM endereco_agente_publico where cpf = '$cpf'";
 $consulta_endereco = $conexao->query($usuario_endereco) or die ($mysqli->error);
-$denuncia = "SELECT * FROM denuncia,denunciante,endereco";
+$denuncia = "SELECT * FROM denuncia";
 $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
+
+while ($dados = $consulta_denuncia->fetch_array())
+
+$cpf_D = $dados["cpf"];
+
+$usuario_D = "SELECT * FROM denunciante where cpf = '$cpf_D'";
+$consulta_D = $conexao->query($usuario_D) or die ($mysqli->error);
+$usuario_endereco_D = "SELECT * FROM endereco where cpf = '$cpf_D'";
+$consulta_endereco_D = $conexao->query($usuario_endereco_D) or die ($mysqli->error);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,79 +135,28 @@ $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
 
         <div class="section-title">
           <h2>Denuncias</h2>
+          <form action="atualizar_pagina_agente.php">
+                <button type="submit">Atualizar</button>
+          </form>
         </div>
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-          <?php while ($dados = $consulta_denuncia->fetch_array()) { ?>
-            <h3 class="resume-title"><?php echo $dados["protocolo"]; ?></h3>
+          <?php while ($dados = $consulta_denuncia && $dados_D = $consulta_D && $dados_endereco_D = $consulta_endereco_D ->fetch_array()){ ?>
+            <h3 ><?php echo $dados["protocolo"]; ?></h3>
             <div class="resume-item pb-0">
-              <h4><?php echo $dados["nome"]; ?></h4>
-              <p><em><?php echo $dados["denuncia"]; ?></em></p>
-              <ul>
-                <li><?php echo $dados["cidade"]; echo $dados[ "bairro"]; ?></li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
+              <h3><?php echo $dados_D["nome"]; ?></h2>
+              <li>Denúncia : <em><?php echo $dados["denuncia"]; ?></em></li>
+                <li>Cidade : <?php echo $dados_endereco_D["cidade"]; ?></li>
+                <li>Bairro : <?php echo $dados_endereco_D[ "bairro"]; ?></li>
+                <li>Número : <?php echo $dados_endereco_D[ "numero"]; ?></li>
+                <li>Estado : <?php echo $dados_D[ "estado"]; ?></li>
+                <li>Telefone : <?php echo $dados[ "telefone"]; ?></li>
+                <hr></hr>
               </ul>
             </div>
           <?php } ?>
-
-            <h3 class="resume-title">Protocolo</h3>
-            <div class="resume-item pb-0">
-              <h4>Nome da vitima</h4>
-              <p><em>Denuncia</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Protocolo</h3>
-            <div class="resume-item pb-0">
-              <h4>Nome da vitima</h4>
-              <p><em>Denuncia</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Protocolo</h3>
-            <div class="resume-item pb-0">
-              <h4>Nome da vitima</h4>
-              <p><em>Denuncia</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div>
-            <h3 class="resume-title">Protocolo</h3>
-            <div class="resume-item pb-0">
-              <h4>Nome da vitima</h4>
-              <p><em>Denuncia</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div>
-            <h3 class="resume-title">Protocolo</h3>
-            <div class="resume-item pb-0">
-              <h4>Nome da vitima</h4>
-              <p><em>Denuncia</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div>
-          </div>
         </div>
-
       </div>
     </section><!-- End Resume Section -->
 

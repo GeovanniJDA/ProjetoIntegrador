@@ -160,7 +160,6 @@ $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
 
       <section id="resume" class="contact">
       <div class="container">
-
         <div class="section-title">
           <h2>Denuncias</h2>
           <div class="d-flex align-items-stretch form-group">
@@ -174,16 +173,27 @@ $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
+          <div class="col-lg-12" data-aos="fade-up">
             <div>
             <?php while ($dados = $consulta_denuncia->fetch_array()) { ?>
               <ul>
               </br>
-                <li><?php echo $dados["denuncia"]; ?></li><div class="text-center">
-                  <form action="deletar_denuncia.php">
-                  <div class="botao"><button type="submit">Excluir</button></div>
-                  </form>
-                  <hr></hr>
+                    <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
+
+                    <form action="deletar_denuncia.php" method="post" role="form">
+                    
+                    <li>Denúncia : <?php echo $dados["denuncia"]; ?></li><div class="text-center"></div>
+                    <hr></hr>
+                    <li>Número de Denúncia : <?php echo $dados["protocolo"]; ?></li><div class="text-center"></div>
+
+                    <div class="col-lg-15" data-aos="fade-up">
+                    <input type="text" class="form-control" name="protocolo" id="protocolo" placeholder="Repita aqui o número acima" required>
+                    </div>
+
+                    <div><button class="text-start" type="submit">Excluir</button></div>
+                    <hr></hr>
+                    </form>
+                    </div>
               </ul>
             <?php } ?>
             </div>

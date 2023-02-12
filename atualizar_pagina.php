@@ -1,4 +1,4 @@
 <?php
-    ///atualiza somente as denúncias !
+    ///atualiza a pagina !
     header('Location:index_denunciante.php');
 ?>
