@@ -148,7 +148,7 @@ $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
                         <div class="my-3">
                           <div class="loading">Enviando</div>
                           <div class="sent-message">Your message has been sent. Thank you!</div>
-                          <div class="error-message"></div>
+                          <div class="error-message sent-message">Enviado com sucesso!</div>
                         </div>
                         <div><button class="text-start" type="submit">Enviar</button></div>
                    </div>
@@ -250,8 +250,8 @@ $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
             </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="error-message sent-message"></div>
               </div>
               <div class="text-center"><button type="submit">Atualizar</button></div>
             </form>

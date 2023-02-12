@@ -79,6 +79,7 @@ $consulta_endereco_D = $conexao->query($usuario_endereco_D) or die ($mysqli->err
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Perfil</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Area de Denuncia</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Conta</span></a></li>
+          <li><a href="#facts" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Feedbacks</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -299,6 +300,40 @@ $consulta_endereco_D = $conexao->query($usuario_endereco_D) or die ($mysqli->err
       </div>
     </section>
     <!-- End Contact Section -->
+
+    <section id="facts" class="contact">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>Feedback</h2>
+          </div>
+          
+  
+          <div class="row" data-aos="fade-in">
+  
+            <div class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch">
+              <form action="analise.php" method="post" role="form" class="php-email-form">
+                  <div class="row">
+                        <div class="form-group col-md-5">
+                          <label for="name">Protocolo</label>
+                          <input type="text" name="protocolo" class="form-control" id="protocolo" placeholder="informe o protocolo referente a denuncia" required>
+                        </div>
+                        <div class="form-group col-md-10">
+                          <label for="name">Parecer</label>
+                          <textarea class="form-control" name="parecer" rows="10" id="parecer" required></textarea>
+                        </div>
+                        <div class="my-3">
+                          <div class="loading">Enviando</div>
+                          <div class="sent-message">Enviado com sucesso!</div>
+                          <div class="error-message sent-message">Enviado com sucesso!</div>
+                        </div>
+                        <div><button class="text-start" type="submit">Enviar</button></div>
+                   </div>
+               </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
   </main><!-- End #main -->
 
