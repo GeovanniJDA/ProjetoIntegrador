@@ -4,11 +4,12 @@ include('conexao.php');
 session_start();
 
 $cpf = $_SESSION['cpf'];
-
 $usuario = "SELECT * FROM agente_publico where cpf = '$cpf'";
 $consulta = $conexao->query($usuario) or die ($mysqli->error);
 $usuario_endereco = "SELECT * FROM endereco_agente_publico where cpf = '$cpf'";
 $consulta_endereco = $conexao->query($usuario_endereco) or die ($mysqli->error);
+$denuncia = "SELECT * FROM denuncia,denunciante,endereco";
+$consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -127,16 +128,18 @@ $consulta_endereco = $conexao->query($usuario_endereco) or die ($mysqli->error);
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Protocolo</h3>
+          <?php while ($dados = $consulta_denuncia->fetch_array()) { ?>
+            <h3 class="resume-title"><?php echo $dados["protocolo"]; ?></h3>
             <div class="resume-item pb-0">
-              <h4>Nome da vitima</h4>
-              <p><em>Denuncia</em></p>
+              <h4><?php echo $dados["nome"]; ?></h4>
+              <p><em><?php echo $dados["denuncia"]; ?></em></p>
               <ul>
-                <li>Portland par 127,Orlando, FL</li>
+                <li><?php echo $dados["cidade"]; echo $dados[ "bairro"]; ?></li>
                 <li>(123) 456-7891</li>
                 <li>alice.barkley@example.com</li>
               </ul>
             </div>
+          <?php } ?>
 
             <h3 class="resume-title">Protocolo</h3>
             <div class="resume-item pb-0">

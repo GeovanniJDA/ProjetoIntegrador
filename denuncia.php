@@ -13,5 +13,4 @@ $sql= "INSERT INTO denuncia VALUES ('$protocolo','$denuncia','$cpf')";
 
 $denuncias = $conexao->query($sql) or die ($conexao);
 
-
 ?>

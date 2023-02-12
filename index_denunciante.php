@@ -40,8 +40,12 @@ $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
 
   <!-- =======================================================
   * Template Name: iPortfolio - v3.10.0
@@ -154,20 +158,20 @@ $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
         </div>
       </section>
 
-      <section id="resume" class="resume">
+      <section id="resume" class="contact">
       <div class="container">
 
         <div class="section-title">
           <h2>Denuncias</h2>
-        <form>
-          <form action="atualizar_pagina.php">
-          <button type="submit">Atualizar</button>
-          </form>
-          
-          <form action="deletar_todas_denuncias.php">
-          <button type="submit">Excluir todas Denúncias</button></div>
-          </form>
-        </form>
+          <div class="d-flex align-items-stretch form-group">
+              <form action="atualizar_pagina.php">
+                <button type="submit">Atualizar</button>
+              </form>
+              
+              <form action="deletar_todas_denuncias.php">
+                <button type="submit">Excluir todas Denúncias</button>
+              </form>
+          </div>
         </div>
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
@@ -177,7 +181,7 @@ $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
               </br>
                 <li><?php echo $dados["denuncia"]; ?></li><div class="text-center">
                   <form action="deletar_denuncia.php">
-                  <button type="submit">Excluir</button></div>
+                  <div class="botao"><button type="submit">Excluir</button></div>
                   </form>
                   <hr></hr>
               </ul>
