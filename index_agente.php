@@ -9,17 +9,23 @@ $usuario = "SELECT * FROM agente_publico where cpf = '$cpf'";
 $consulta = $conexao->query($usuario) or die ($mysqli->error);
 $usuario_endereco = "SELECT * FROM endereco_agente_publico where cpf = '$cpf'";
 $consulta_endereco = $conexao->query($usuario_endereco) or die ($mysqli->error);
+
+//visualizações das denuncias
+
 $denuncia = "SELECT * FROM denuncia";
 $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
-
+/*
 while ($dados = $consulta_denuncia->fetch_array())
 
-$cpf_D = $dados["cpf"];
+$cpf_D = $dados['cpf'];
 
 $usuario_D = "SELECT * FROM denunciante where cpf = '$cpf_D'";
 $consulta_D = $conexao->query($usuario_D) or die ($mysqli->error);
 $usuario_endereco_D = "SELECT * FROM endereco where cpf = '$cpf_D'";
 $consulta_endereco_D = $conexao->query($usuario_endereco_D) or die ($mysqli->error);
+$denuncia2 = "SELECT * FROM denuncia where cpf = '$cpf_D'";
+$consulta_denuncia2 = $conexao->query($denuncia2) or die ($mysqli->error);
+*/
 
 ?>
 <!DOCTYPE html>
@@ -136,6 +142,7 @@ $consulta_endereco_D = $conexao->query($usuario_endereco_D) or die ($mysqli->err
 
         <div class="section-title">
           <h2>Denuncias</h2>
+
           <form action="atualizar_pagina_agente.php">
                 <button type="submit">Atualizar</button>
           </form>
@@ -143,22 +150,17 @@ $consulta_endereco_D = $conexao->query($usuario_endereco_D) or die ($mysqli->err
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-          <?php while ($dados = $consulta_denuncia && $dados_D = $consulta_D && $dados_endereco_D = $consulta_endereco_D ->fetch_array()){ ?>
-            <h3 ><?php echo $dados["protocolo"]; ?></h3>
             <div class="resume-item pb-0">
-              <h3><?php echo $dados_D["nome"]; ?></h2>
-              <li>Denúncia : <em><?php echo $dados["denuncia"]; ?></em></li>
-                <li>Cidade : <?php echo $dados_endereco_D["cidade"]; ?></li>
-                <li>Bairro : <?php echo $dados_endereco_D[ "bairro"]; ?></li>
-                <li>Número : <?php echo $dados_endereco_D[ "numero"]; ?></li>
-                <li>Estado : <?php echo $dados_D[ "estado"]; ?></li>
-                <li>Telefone : <?php echo $dados[ "telefone"]; ?></li>
-                <hr></hr>
-              </ul>
-            </div>
+          <?php while ($dados_DN = $consulta_denuncia ->fetch_array()){ ?>
+            <h3 ><?php echo $dados_DN["protocolo"]; ?></h3>
+              <li>Denúncia : <em><?php echo $dados_DN["denuncia"]; ?></em></li>
+              <li>CPF : <em><?php echo $dados_DN["cpf"]; ?></em></li>
+              <hr></hr>
           <?php } ?>
+          </div>
         </div>
       </div>
+    </div>
     </section><!-- End Resume Section -->
 
     <!-- ======= Contact Section ======= -->
