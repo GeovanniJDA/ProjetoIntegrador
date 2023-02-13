@@ -163,9 +163,7 @@ $consulta_denuncia = $conexao->query($denuncia) or die ($mysqli->error);
         <div class="section-title">
           <h2>Denuncias</h2>
           <div class="d-flex align-items-stretch form-group">
-              <form action="atualizar_pagina.php">
-                <button type="submit">Atualizar</button>
-              </form>
+              
               
               <form action="deletar_todas_denuncias.php">
                 <button type="submit">Excluir todas Denúncias</button>

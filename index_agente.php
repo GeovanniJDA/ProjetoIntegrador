@@ -312,7 +312,7 @@ $consulta_endereco_D = $conexao->query($usuario_endereco_D) or die ($mysqli->err
           <div class="row" data-aos="fade-in">
   
             <div class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="analise.php" method="post" role="form" class="php-email-form">
+              <form action="analise.php" method="post" role="form">
                   <div class="row">
                         <div class="form-group col-md-5">
                           <label for="name">Protocolo</label>
@@ -321,11 +321,6 @@ $consulta_endereco_D = $conexao->query($usuario_endereco_D) or die ($mysqli->err
                         <div class="form-group col-md-10">
                           <label for="name">Parecer</label>
                           <textarea class="form-control" name="parecer" rows="10" id="parecer" required></textarea>
-                        </div>
-                        <div class="my-3">
-                          <div class="loading">Enviando</div>
-                          <div class="sent-message">Enviado com sucesso!</div>
-                          <div class="error-message sent-message">Enviado com sucesso!</div>
                         </div>
                         <div><button class="text-start" type="submit">Enviar</button></div>
                    </div>
