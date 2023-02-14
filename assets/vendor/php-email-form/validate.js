@@ -65,7 +65,7 @@
         print('Sucesso!'); 
         thisForm.reset(); 
       } else {
-        print('Sucesso!'); 
+        throw new Error(data ? data : 'Form submission failed end no error message returned from: ' + action);
       }
     })
     .catch((error) => {
